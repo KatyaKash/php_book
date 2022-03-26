@@ -1,15 +1,15 @@
-<?php 
-	if (isset($_POST['a'])&&isset($_POST['b'])&&isset($_POST['c'])){
+<?php
+if (isset($_POST['a'])&&isset($_POST['b'])&&isset($_POST['c'])){
 		$a = $_POST['a'];
 		$b = $_POST['b'];
 		$c = $_POST['c'];
 		$D = $b*$b-4*$a*$c;
-		if (D > 0) {
-			$x1 = (-$b+sqrt(D))/(2*$a);
-			$x2 = (-$b-sqrt(D))/(2*$a);
+		if ($D > 0) {
+			$x1 = (-$b+sqrt($D))/(2*$a);
+			$x2 = (-$b-sqrt($D))/(2*$a);
 			print_r('<p>'.$x1.' '.$x2.'<p>');
 		}
-		else if (D == 0) {
+		else if ($D == 0) {
 			$x = -$b/(2*$a);
 			print_r('<p>'.$x.'<p>');
 		}
